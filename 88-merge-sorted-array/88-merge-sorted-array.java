@@ -3,7 +3,7 @@ class Solution {
     int len = nums1.length -1;
   
     int i = m-1, j = n-1;
-    while(i>=0 && j>=0 && i < m && j < n){
+    while(i>=0 && j>=0){
         
         if(nums1[i] >= nums2[j]){
             nums1[len--] = nums1[i--];
@@ -12,11 +12,11 @@ class Solution {
         }
     }
     
-    while(i>=0 && i< m){
+    while(i>=0){
         nums1[len--] = nums1[i--];
     }
     
-    while(j>=0 && j< n){
+    while(j>=0){
         nums1[len--] = nums2[j--];
     }
     return;
